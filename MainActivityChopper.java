@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class MainActivityChopper extends AppCompatActivity {
 
+
    private Button btnResultado;
    private EditText etxtNumeroA;
    private EditText etxtNumeroB;
