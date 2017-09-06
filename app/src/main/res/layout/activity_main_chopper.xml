@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.trafalgar.app.chopper.MainActivityChopper">
+
+    <TextView
+        android:id="@+id/txtvNumeroA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="1er Numero" />
+
+    <EditText
+        android:id="@+id/etxtNumeroA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/txtvNumeroB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="2do Numero"  />
+
+    <EditText
+        android:id="@+id/etxtNumeroB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/rSuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Suma (+)" />
+
+        <RadioButton
+            android:id="@+id/rResta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Resta (-)" />
+
+        <RadioButton
+            android:id="@+id/rMultiplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Multiplicación (x)" />
+
+        <RadioButton
+            android:id="@+id/rDivision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="División (/)" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btnResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="=" />
+
+</LinearLayout>
