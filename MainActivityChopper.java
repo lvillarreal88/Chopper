@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivityChopper extends AppCompatActivity {
 
-
+    private RadioGroup groupOperations;
    private Button btnResultado;
    private EditText etxtNumeroA;
    private EditText etxtNumeroB;
@@ -27,60 +27,35 @@ public class MainActivityChopper extends AppCompatActivity {
 
         btnResultado = (Button) findViewById(R.id.btnResultado);
         etxtNumeroA = (EditText) findViewById(R.id.etxtNumeroA);
-        etxtNumeroB = (EditText) findViewById(R.id.etxtNumeroB) ;
+        etxtNumeroB = (EditText) findViewById(R.id.etxtNumeroB);
+        groupOperations = (RadioGroup) findViewById(R.id.groupOperations);
 
         btnResultado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (v.getId()){
-                    case R.id.rSuma: suma();
+
+
+                //Toast.makeText(MainActivityChopper.this, "okk::" + groupOperations.getCheckedRadioButtonId() + "---" + R.id.rSuma, Toast.LENGTH_SHORT).show();
+
+                int operacion = groupOperations.getCheckedRadioButtonId();
+
+                switch (operacion) {
+                    case R.id.rSuma:
+                        suma();
                         break;
-                    case R.id.rResta: resta();
+                    case R.id.rResta:
+                        resta();
                         break;
-                    case R.id.rMultiplicacion: multiplicacion();
+                    case R.id.rMultiplicacion:
+                        multiplicacion();
                         break;
-                    case R.id.rDivision: division();
+                    case R.id.rDivision:
+                        division();
                         break;
                 }
                 mostrar(resultado);
             }
         });
-       /*  etxtNombre = (EditText) findViewById(R.id.etxtNombre);
-        etxtApellidos = (EditText) findViewById(R.id.etxtApellidos);
-        txtvNombreCompleto = (TextView) findViewById(R.id.txtvNombreCompleto);
-
-        btnMostrarMensaje.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mostrarMensaje();
-            }
-        });*/
-
-    }
-
-    /*@Override
-    public void onClick(View v) {
-            switch (v.getId()){
-                case R.id.rSuma: suma();
-                    break;
-                case R.id.rResta: resta();
-                    break;
-                case R.id.rMultiplicacion: multiplicacion();
-                    break;
-                case R.id.rDivision: division();
-                    break;
-            }
-    }*/
-
-/*    public void onMostrarMensaje(View view) {
-        Toast.makeText(MainActivityChopper.this, ":: vaina canalla android ::", Toast.LENGTH_LONG).show();
-    }*/
-
-    public void mostrarMensaje() {
-        String msj=":: eppa! mostro mensaje ::";
-        //String msj="::".concat(etxtNombre.getText().toString()).concat(" ").concat(etxtApellidos.getText().toString()).concat("::");
-       //txtvNombreCompleto.setText(msj);
-        Toast.makeText(MainActivityChopper.this, msj, Toast.LENGTH_LONG).show();
     }
 
     public void suma(){
@@ -110,7 +85,7 @@ public class MainActivityChopper extends AppCompatActivity {
     }
 
     public void mostrar(int result){
-        Toast.makeText(MainActivityChopper.this,resultado, Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivityChopper.this,"Resultado: " + resultado, Toast.LENGTH_LONG).show();
     }
 
 }
